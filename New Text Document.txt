@@ -1,0 +1,53 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocationService } from '../location/location.service';
+import { Location } from '../location/location.model';
+
+@Component({
+  selector: 'app-createlocation',
+  templateUrl: './createlocation.component.html',
+  styleUrls: ['./createlocation.component.css']
+})
+export class CreatelocationComponent implements OnInit {
+
+  formValue!: FormGroup;
+
+  constructor(
+    private locationService: LocationService,
+    private router: Router,
+    private formBuilder: FormBuilder
+  ) {}
+
+  ngOnInit(): void {
+    this.formValue = this.formBuilder.group({
+      name: ['', Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      photo: [''],
+      availableUnits: [0, [Validators.required, Validators.min(0)]],
+      wifi: [false],
+      laundry: [false]
+    });
+  }
+
+  createLocation(): void {
+    if (this.formValue.invalid) {
+      this.formValue.markAllAsTouched();
+      return;
+    }
+
+    const location: Location = { ...this.formValue.value };
+
+    this.locationService.createLocation(location).subscribe({
+      next: (res) => {
+        console.log('Location created:', res);
+        this.formValue.reset();
+        this.router.navigate(['/location']);
+      },
+      error: (err) => {
+        console.error('Creation failed:', err);
+      }
+    });
+  }
+}
