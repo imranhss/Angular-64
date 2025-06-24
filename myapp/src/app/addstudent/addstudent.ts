@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -19,7 +19,8 @@ export class Addstudent implements OnInit {
   constructor(
     private studentService: StudentService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+       
   ) { }
 
 

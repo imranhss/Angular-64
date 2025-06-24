@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Student } from '../../model/student.model';
 
 @Injectable({
@@ -30,6 +30,12 @@ export class StudentService {
     return this.http.delete(this.baseUrl + "/" + id);
 
   }
+
+    private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('test'));
+  }
+
 
 
 }

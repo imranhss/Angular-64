@@ -1,18 +1,5 @@
 {
-  "students": [
-    {
-      "id": "98fb",
-      "name": "Muhammad Emran Hossain",
-      "email": "hsstanvir@gmail.com",
-      "fee": "2121212"
-    },
-    {
-      "id": "b5ad",
-      "name": "Rajib Chandra Ghosh",
-      "email": "pattanderente...13@gmail.com",
-      "fee": "20000000"
-    }
-  ],
+  "students": [],
   "locations": [
     {
       "id": "0",
