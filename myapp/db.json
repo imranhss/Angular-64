@@ -1,40 +1,16 @@
 {
   "students": [
     {
-      "id": "1",
-      "name": "Rahim",
-      "email": "rahim@gmail.com",
-      "fee": 15000
-    },
-    {
-      "id": "2",
-      "name": "Atik",
-      "email": "atik@gmail.com",
-      "fee": 18000
-    },
-    {
-      "id": "46d6",
-      "name": "Rahim Khan",
-      "email": "pattanderente...13@gmail.com",
+      "id": "98fb",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
       "fee": "2121212"
     },
     {
-      "id": "dbc8",
-      "name": "Parvez",
-      "email": "parvez@gmail.com",
-      "fee": "20000000"
-    },
-    {
-      "id": "4d96",
-      "name": "Atique",
-      "email": "Atique@gmail.com",
-      "fee": 5000
-    },
-    {
-      "id": "f820",
-      "name": "Muhammad Emran Hossain",
+      "id": "b5ad",
+      "name": "Rajib Chandra Ghosh",
       "email": "pattanderente...13@gmail.com",
-      "fee": "1234"
+      "fee": "20000000"
     }
   ],
   "locations": [
