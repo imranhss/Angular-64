@@ -1,0 +1,14 @@
+1. Take Project
+2. Add JSON server
+3. Add db.json file in root Directory
+4. add Bootstrap for design 
+5. Take folder in src as Model
+5. Take Model Class 
+	ng g m model/model class name 
+6. Take Service Class 
+	Ng g S service/ desired Name
+7. Work in Service Class with API
+8. Take required Component 
+	ng g c component name
+9. And Now work in Componet (.ts) file 
+	then component (.html) file
