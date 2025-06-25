@@ -1,5 +1,18 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": "4455",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
+      "fee": "2121212"
+    },
+    {
+      "id": "9fb3",
+      "name": "Rahim Khan",
+      "email": "pattanderente...13@gmail.com",
+      "fee": "20000000"
+    }
+  ],
   "locations": [
     {
       "id": "0",
