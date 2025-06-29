@@ -55,8 +55,6 @@ export class Addstudent implements OnInit {
     });
 
 
-
-
   }
 
 
