@@ -1,118 +1,47 @@
 {
   "students": [
     {
-      "id": "4455",
-      "name": "Muhammad Emran Hossain",
-      "email": "hsstanvir@gmail.com",
-      "fee": "2121212"
+      "id": "9e15",
+      "name": "Parvez",
+      "email": "parvez@gmail.com",
+      "fee": "20000000",
+      "location": {
+        "name": "Borishal",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/7/78/Barisal_Launch_Terninal.jpg"
+      }
     },
     {
-      "id": "9fb3",
-      "name": "Rahim Khan",
-      "email": "pattanderente13@gmail.com",
-      "fee": "2000"
+      "id": "3d1d",
+      "name": "dfgdfg",
+      "email": "dfgfdgd",
+      "fee": "11111",
+      "location": {
+        "name": "Borishal",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/7/78/Barisal_Launch_Terninal.jpg"
+      }
+    },
+    {
+      "id": "730d",
+      "name": "Farhana Haque",
+      "email": "hsstanvir@gmail.com",
+      "fee": "2121212",
+      "location": {
+        "name": "Dhaka",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYV3EfsaWMn0aXHxhb5FuXZlJWEbIjUPwSyg&s"
+      }
     }
   ],
-  "locations": [
-    {
-      "id": "0",
-      "name": "Acme Fresh Start Housing",
-      "city": "Chicago",
-      "state": "IL",
-      "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
-      "wifi": true,
-      "laundry": true
-    },
+  "location": [
     {
       "id": "1",
-      "name": "A113 Transitional Housing",
-      "city": "Santa Monica",
-      "state": "CA",
-      "photo": "https://angular.dev/assets/images/tutorials/common/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
-      "wifi": false,
-      "laundry": true
+      "name": "Borishal",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/7/78/Barisal_Launch_Terninal.jpg"
     },
     {
-      "id": "2",
-      "name": "Warm Beds Housing Support",
-      "city": "Juneau",
-      "state": "AK",
-      "photo": "https://angular.dev/assets/images/tutorials/common/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
-      "wifi": false,
-      "laundry": false
-    },
-    {
-      "id": "3",
-      "name": "Homesteady Housing",
-      "city": "Chicago",
-      "state": "IL",
-      "photo": "https://angular.dev/assets/images/tutorials/common/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
-      "availableUnits": 1,
-      "wifi": true,
-      "laundry": false
-    },
-    {
-      "id": "4",
-      "name": "Happy Homes Group",
-      "city": "Gary",
-      "state": "IN",
-      "photo": "https://angular.dev/assets/images/tutorials/common/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
-      "availableUnits": 1,
-      "wifi": true,
-      "laundry": false
-    },
-    {
-      "id": "5",
-      "name": "Hopeful Apartment Group",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "6",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.dev/assets/images/tutorials/common/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
-      "availableUnits": 5,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "7",
-      "name": "Hopeful Housing Solutions",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-GGupkreKwxA-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "8",
-      "name": "Seriously Safe Towns",
-      "city": "Oakland",
-      "state": "CA",
-      "photo": "https://angular.dev/assets/images/tutorials/common/saru-robert-9rP3mxf8qWI-unsplash.jpg",
-      "availableUnits": 10,
-      "wifi": false,
-      "laundry": false
-    },
-    {
-      "id": "9",
-      "name": "Capital Safe Towns",
-      "city": "Portland",
-      "state": "OR",
-      "photo": "https://angular.dev/assets/images/tutorials/common/webaliser-_TPTXZd9mOo-unsplash.jpg",
-      "availableUnits": 6,
-      "wifi": true,
-      "laundry": true
+      "id": "b0c5",
+      "name": "Dhaka",
+      "email": "",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYV3EfsaWMn0aXHxhb5FuXZlJWEbIjUPwSyg&s"
     }
   ]
 }

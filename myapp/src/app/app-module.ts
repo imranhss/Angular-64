@@ -9,6 +9,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Addstudent } from './addstudent/addstudent';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Updatestudent } from './updatestudent/updatestudent';
+import { Addlocation } from './location/addlocation/addlocation';
+import { ViewAllLocation } from './location/view-all-location/view-all-location';
+import { UpdateLocation } from './location/update-location/update-location';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { Updatestudent } from './updatestudent/updatestudent';
     Home,
     ViewAllStudent,
     Addstudent,
-    Updatestudent
+    Updatestudent,
+    Addlocation,
+    ViewAllLocation,
+    UpdateLocation
   ],
   imports: [
     BrowserModule,

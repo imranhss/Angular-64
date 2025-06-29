@@ -5,6 +5,9 @@ import { Home } from './home/home';
 import { ViewAllStudent } from './view-all-student/view-all-student';
 import { Addstudent } from './addstudent/addstudent';
 import { Updatestudent } from './updatestudent/updatestudent';
+import { ViewAllLocation } from './location/view-all-location/view-all-location';
+import { Addlocation } from './location/addlocation/addlocation';
+import { UpdateLocation } from './location/update-location/update-location';
 
 const routes: Routes = [
    {path: '', component:Home},
@@ -13,6 +16,9 @@ const routes: Routes = [
    
    {path: 'addStu', component:Addstudent},
    {path: 'updatestudent/:id', component:Updatestudent},
+   {path: 'updatelocation/:id', component:UpdateLocation},
+   {path: 'allloc', component:ViewAllLocation},
+   {path: 'addloc', component:Addlocation},
    
 
 ];

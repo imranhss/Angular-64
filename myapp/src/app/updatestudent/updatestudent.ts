@@ -1,8 +1,9 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Student } from '../../model/student.model';
+
 import { StudentService } from '../service/student.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { R } from '@angular/cdk/keycodes';
+import { Student } from '../model/student.model';
 
 @Component({
   selector: 'app-updatestudent',

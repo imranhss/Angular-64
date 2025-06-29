@@ -1,6 +1,10 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
 import { Router } from '@angular/router';
+import { LocationService } from '../service/location.service';
+import { forkJoin } from 'rxjs';
+import { Student } from '../model/student.model';
+import { Location } from '../model/location.model';
 
 
 
@@ -11,30 +15,49 @@ import { Router } from '@angular/router';
   styleUrl: './view-all-student.css'
 })
 export class ViewAllStudent implements OnInit {
-  students: any;
+
+  
+  students : Student[]=[];
+  locations : Location[]=[];
 
   constructor(
     private studentService: StudentService,
     private router: Router,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private locationService: LocationService
 
   ) { }
 
   ngOnInit(): void {
-    this.loadAllStudent();
+    this.loadData();
   }
 
-  loadAllStudent(): void {
-    this.students = this.studentService.getAllStudent();
+
+
+ loadData(): void {
+    forkJoin({
+      locations: this.locationService.getAllLocation(),
+      students: this.studentService.getAllStudent()
+    }).subscribe({
+      next: ({ locations, students }) => {
+        this.locations = locations;
+        this.students = students;
+        this.cdr.markForCheck();
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
   }
 
-  deleteStudent(id: string): void {
+
+   deleteStudent(id: string): void {
     this.studentService.deleteStudent(id).subscribe({
       next: () => {
 
         console.log('Student deleted');
-        this.loadAllStudent();
-        this.cdr.reattach();
+        this.loadData();
+        this.cdr.markForCheck();
       },
       error: (err) => {
         console.log('Error deleting student:', err);
@@ -58,9 +81,5 @@ export class ViewAllStudent implements OnInit {
     });
 
   }
-
-
-
-
 
 }
