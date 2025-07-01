@@ -8,6 +8,7 @@ import { Updatestudent } from './updatestudent/updatestudent';
 import { ViewAllLocation } from './location/view-all-location/view-all-location';
 import { Addlocation } from './location/addlocation/addlocation';
 import { UpdateLocation } from './location/update-location/update-location';
+import { Registration } from './auth/registration/registration';
 
 const routes: Routes = [
    {path: '', component:Home},
@@ -19,6 +20,7 @@ const routes: Routes = [
    {path: 'updatelocation/:id', component:UpdateLocation},
    {path: 'allloc', component:ViewAllLocation},
    {path: 'addloc', component:Addlocation},
+   {path: 'reg', component:Registration},
    
 
 ];
