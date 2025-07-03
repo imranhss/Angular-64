@@ -11,11 +11,17 @@ import { Login } from './auth/login/login';
 import { Userprofile } from './auth/userprofile/userprofile';
 import { Logout } from './auth/logout/logout';
 import { Admin } from './auth/admin/admin';
+import { Addstudent } from './student/addstudent/addstudent';
+import { Viewallstudent } from './student/viewallstudent/viewallstudent';
+import { Editstudent } from './student/editstudent/editstudent';
+import { Addlocation } from './location/addlocation/addlocation';
+import { Viewalllocation } from './location/viewalllocation/viewalllocation';
+import { Updatelocation } from './location/updatelocation/updatelocation';
 
 @NgModule({
   declarations: [
     App,    
-    Registrationt, Login, Userprofile, Logout, Admin
+    Registrationt, Login, Userprofile, Logout, Admin, Addstudent, Viewallstudent, Editstudent, Addlocation, Viewalllocation, Updatelocation
   ],
   imports: [
     BrowserModule,

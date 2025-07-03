@@ -85,7 +85,7 @@ export class AuthService {
     }
     this.currentUserSubject.next(user);
   }
-  
+
 // start logout
   logout(): void {
     this.clearCurrentUser();
@@ -141,4 +141,15 @@ export class AuthService {
     }
     return null;
   }
+
+
+  isAdmin(): boolean {
+    return this.getUserRole() === 'admin';
+  }
+
+  isUser(): boolean {
+    const role = this.getUserRole();
+    return role === 'user';
+  }
+
 }
