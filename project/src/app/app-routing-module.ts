@@ -9,7 +9,7 @@ import { Admin } from './auth/admin/admin';
 const routes: Routes = [
 
 {path: 'reg', component:Registrationt},
-{path: 'login', component:Login},
+{path: '', component:Login},
 {path: 'userprofile', component:Userprofile},
 {path: 'logout', component:Logout},
 {path: 'adminprofile', component:Admin},
