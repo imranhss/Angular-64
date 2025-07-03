@@ -1,0 +1,52 @@
+{
+  "user": [
+    {
+      "id": "dbf7",
+      "name": "Muhammad Emran Hossain",
+      "email": "emranhss@gmail.com",
+      "password": "123456",
+      "photo": "https://tinyurl.com/6dt7txrj",
+      "role": "admin"
+    },
+    {
+      "id": "8542",
+      "name": "Rahim Khan",
+      "email": "hsstanvir@gmail.com",
+      "password": "123456",
+      "photo": "https://avatars.githubusercontent.com/u/21266856?v=4",
+      "role": "user"
+    },
+    {
+      "id": "e78d",
+      "name": "Parvez",
+      "email": "rahim@gmail.com",
+      "password": "123456",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-qAzVLU-PBewXJuHtUdytv8H_HYZ--U0xQ&s",
+      "role": "user"
+    },
+    {
+      "id": "aa2e",
+      "name": "apple",
+      "email": "apple@gmail.com",
+      "password": "123456",
+      "photo": "asdf",
+      "role": "user"
+    },
+    {
+      "id": "dd72",
+      "name": "aaaaaa",
+      "email": "aaaaa@gmail.com",
+      "password": "123456",
+      "photo": "aaaaa",
+      "role": "user"
+    },
+    {
+      "id": "5992",
+      "name": "QQQQ",
+      "email": "qqq@gmail.com",
+      "password": "1234567",
+      "photo": "qqqqqq",
+      "role": "user"
+    }
+  ]
+}

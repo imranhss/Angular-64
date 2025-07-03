@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../service/auth-service';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './login.css'
 })
 export class Login {
+
 
   loginForm!: FormGroup;
    errorMessage: string = '';
@@ -44,10 +45,10 @@ onSubmit(): void {
       const role = this.authService.getUserRole();
       console.log('User role:', role);
 
-      if (role === 'Admin') {
+      if (role === 'user') {
         this.router.navigate(['/userprofile']);
-      } else if (role === 'User') {
-        this.router.navigate(['/userprofile']);
+      } else if (role === 'admin') {
+        this.router.navigate(['/adminprofile']);
       } else {
         this.errorMessage = 'Unknown user role.';
       }
@@ -61,31 +62,5 @@ onSubmit(): void {
   });
 }
 
-
-  // onSubmit(): void {
-    
-  //     const userDetails = this.loginForm.value;
-  //     this.authService.login(userDetails).subscribe({
-  //       next: (res) => {
-  //         console.log('User logged in successfully:', res);
-
-  //         this.authService.storeToken(res.token);
-
-  //         const role = this.authService.getUserRole();
-  //         console.log(role);
-
-  //         if (role === 'Admin') {
-  //           this.router.navigate(['/admin']);
-  //         } else {
-  //           this.router.navigate(['/userprofile']);
-  //         }
-  //       },
-  //       error: (err) => {
-  //         console.error('Error logging in:', err);
-  //          this.errorMessage = 'Invalid email or password.';
-  //       }
-  //     });
-    
-  // }
 
 }

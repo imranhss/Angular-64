@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../service/auth-service';
-import { Route, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../model/user.model';
+import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
+import { UserModule } from '../../model/user-module';
 
 @Component({
-  selector: 'app-registration',
+  selector: 'app-registrationt',
   standalone: false,
-  templateUrl: './registration.html',
-  styleUrl: './registration.css'
+  templateUrl: './registrationt.html',
+  styleUrl: './registrationt.css'
 })
-export class Registration {
-
+export class Registrationt {
   regForm!: FormGroup;
 
   constructor(
@@ -34,8 +33,8 @@ export class Registration {
 
   onSubmit(): void {
     if (this.regForm.valid) {
-      
-      const user: User = {
+
+      const user: UserModule = {
         ...this.regForm.value,
         role: 'user'
       };
@@ -55,7 +54,6 @@ export class Registration {
       alert("Complte mandatory Field");
     }
   }
-
 
 
 

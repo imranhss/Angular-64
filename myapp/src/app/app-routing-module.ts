@@ -9,6 +9,9 @@ import { ViewAllLocation } from './location/view-all-location/view-all-location'
 import { Addlocation } from './location/addlocation/addlocation';
 import { UpdateLocation } from './location/update-location/update-location';
 import { Registration } from './auth/registration/registration';
+import { Userprofile } from './auth/userprofile/userprofile';
+import { Login } from './auth/login/login';
+
 
 const routes: Routes = [
    {path: '', component:Home},
@@ -21,6 +24,8 @@ const routes: Routes = [
    {path: 'allloc', component:ViewAllLocation},
    {path: 'addloc', component:Addlocation},
    {path: 'reg', component:Registration},
+   {path: 'userprofile', component:Userprofile},
+   {path: 'login', component:Login},
    
 
 ];
