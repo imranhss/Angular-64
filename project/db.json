@@ -48,5 +48,70 @@
       "photo": "qqqqqq",
       "role": "user"
     }
+  ],
+  
+  "countries": [
+    {
+      "id": 1,
+      "name": "Bangladesh",
+      "divisions": [
+        {
+          "id": 1,
+          "name": "Dhaka Division",
+          "districts": [
+            {
+              "id": 1,
+              "name": "Dhaka District",
+              "police_stations": [
+                { "id": 1, "name": "Gulshan Police Station" },
+                { "id": 2, "name": "Dhanmondi Police Station" }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Gazipur District",
+              "police_stations": [
+                { "id": 3, "name": "Gazipur Sadar Police Station" },
+                { "id": 4, "name": "Tongi Police Station" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Chattogram Division",
+          "districts": [
+            {
+              "id": 3,
+              "name": "Chattogram District",
+              "police_stations": [
+                { "id": 5, "name": "Kotwali Police Station" },
+                { "id": 6, "name": "Panchlaish Police Station" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "India",
+      "divisions": [
+        {
+          "id": 3,
+          "name": "West Bengal",
+          "districts": [
+            {
+              "id": 4,
+              "name": "Kolkata",
+              "police_stations": [
+                { "id": 7, "name": "Lalbazar Police Station" },
+                { "id": 8, "name": "Behala Police Station" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
