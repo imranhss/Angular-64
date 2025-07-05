@@ -12,7 +12,7 @@
         </li>
         <ng-container *ngIf="userRole === 'admin' ">
           <li class="nav-item">
-            <a class="nav-link" href="/allstu">View All Student</a>
+            <a class="nav-link" routerLink="allstu">View All Student</a>
           </li>
 
 
@@ -20,16 +20,9 @@
 
 
 
-        <ng-container *ngIf="userRole === 'user'">
-
+        <ng-container *ngIf="userRole === 'admin' || userRole === 'user'">
           <li class="nav-item">
-            <a class="nav-link" href="/addstu">Add Student</a>
-          </li>
-        </ng-container>
-        <ng-container *ngIf="userRole === 'admin'">
-
-          <li class="nav-item">
-            <a class="nav-link" href="/addstu">Add Student</a>
+            <a class="nav-link" routerLink="addstu">Add Student</a>
           </li>
         </ng-container>
 
@@ -43,8 +36,8 @@
 
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Location</a></li>
-              <li><a class="dropdown-item" href="allloc">View Location</a></li>
-              <li><a class="dropdown-item" href="addloc">Add Location</a></li>
+              <li><a class="dropdown-item" routerLink="allloc">View Location</a></li>
+              <li><a class="dropdown-item" routerLink="addloc">Add Location</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

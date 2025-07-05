@@ -9,26 +9,24 @@ import { Viewallstudent } from './student/viewallstudent/viewallstudent';
 import { Viewalllocation } from './location/viewalllocation/viewalllocation';
 import { Addstudent } from './student/addstudent/addstudent';
 import { Addlocation } from './location/addlocation/addlocation';
-import { AdminGuardGuard } from './guards/admin.guard-guard';
+import { AdminGuardGuard } from './guards/adminguard';
 import { UserGurd } from './guards/user-guard';
+import { AuthGuard } from './guards/authguard';
+
 
 
 const routes: Routes = [
-
-
-{path: 'reg', component:Registrationt},
-{path: '', component:Login},
-{path: 'login', component:Login},
-{path: 'userprofile', component:Userprofile},
-{path: 'logout', component:Logout},
-{path: 'adminprofile', component:Admin},
-{path: 'allstu', component:Viewallstudent , canActivate:[AdminGuardGuard]},
-{path: 'allloc', component:Viewalllocation},
-{path: 'addstu', component:Addstudent, canActivate:[UserGurd, AdminGuardGuard]},
-{path: 'addloc', component:Addlocation, canActivate:[AdminGuardGuard] },
-
-
-
+  { path: 'reg', component: Registrationt },
+  { path: '', component: Login },
+  { path: 'login', component: Login },
+  { path: 'userprofile', component: Userprofile, canActivate: [UserGurd] },
+  { path: 'logout', component: Logout },
+  { path: 'adminprofile', component: Admin, canActivate: [AdminGuardGuard] },
+  { path: 'allstu', component: Viewallstudent, canActivate: [AdminGuardGuard] },
+  { path: 'allloc', component: Viewalllocation, canActivate: [AdminGuardGuard] },
+  { path: 'addstu', component: Addstudent, canActivate: [AuthGuard] },
+  { path: 'addloc', component: Addlocation, canActivate: [AdminGuardGuard] },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
