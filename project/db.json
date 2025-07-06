@@ -51,89 +51,25 @@
   ],
   "countries": [
     {
-      "id": 1,
+      "id": "0263",
       "name": "Bangladesh",
       "divisions": [
-        {
-          "id": 1,
-          "name": "Dhaka Division",
-          "districts": [
-            {
-              "id": 1,
-              "name": "Dhaka District",
-              "policeStations": [
-                {
-                  "id": 1,
-                  "name": "Gulshan Police Station"
-                },
-                {
-                  "id": 2,
-                  "name": "Dhanmondi Police Station"
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "name": "Gazipur District",
-              "policeStations": [
-                {
-                  "id": 3,
-                  "name": "Gazipur Sadar Police Station"
-                },
-                {
-                  "id": 4,
-                  "name": "Tongi Police Station"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Chattogram Division",
-          "districts": [
-            {
-              "id": 3,
-              "name": "Chattogram District",
-              "policeStations": [
-                {
-                  "id": 5,
-                  "name": "Kotwali Police Station"
-                },
-                {
-                  "id": 6,
-                  "name": "Panchlaish Police Station"
-                }
-              ]
-            }
-          ]
-        }
+        "0614"
       ]
     },
     {
-      "id": 2,
+      "id": "fbe4",
+      "name": "Bangladesh",
+      "divisions": [
+        "0614",
+        "3203"
+      ]
+    },
+    {
+      "id": "621c",
       "name": "India",
       "divisions": [
-        {
-          "id": 3,
-          "name": "West Bengal",
-          "districts": [
-            {
-              "id": 4,
-              "name": "Kolkata",
-              "policeStations": [
-                {
-                  "id": 7,
-                  "name": "Lalbazar Police Station"
-                },
-                {
-                  "id": 8,
-                  "name": "Behala Police Station"
-                }
-              ]
-            }
-          ]
-        }
+        "e391"
       ]
     }
   ],
@@ -173,6 +109,18 @@
     {
       "id": "4664",
       "name": "asdf"
+    },
+    {
+      "id": "8286",
+      "name": "Krisno Nogar"
+    },
+    {
+      "id": "015b",
+      "name": "Ranaghat"
+    },
+    {
+      "id": "0a8e",
+      "name": "DamDam"
     }
   ],
   "districts": [
@@ -195,6 +143,15 @@
         "sd",
         "4664"
       ]
+    },
+    {
+      "id": "02f8",
+      "name": "Kolkata",
+      "policeStations": [
+        "8286",
+        "015b",
+        "0a8e"
+      ]
     }
   ],
   "divisions": [
@@ -205,6 +162,33 @@
         "0b31",
         "9c34"
       ]
+    },
+    {
+      "id": "3203",
+      "name": "Barishal",
+      "districts": [
+        "0b31",
+        "9c34"
+      ]
+    },
+    {
+      "id": "e391",
+      "name": "West Bengal",
+      "districts": [
+        "02f8"
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "id": "1fd6",
+      "name": "asdfff",
+      "salary": 5000,
+      "email": "ASDASDASDSA@DDD.KM",
+      "country": "621c",
+      "division": "e391",
+      "district": "02f8",
+      "policeStation": "0a8e"
     }
   ]
 }

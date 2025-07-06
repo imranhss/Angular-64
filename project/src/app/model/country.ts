@@ -1,11 +1,11 @@
 import { Division } from "./division";
 
 export class Country {
-  id: number;
+  id: string;
   name: string;
-  divisions: Division[];
+  divisions: string[];
 
-  constructor(id: number, name: string, divisions: Division[] = []) {
+  constructor(id: string, name: string, divisions: string[] = []) {
     this.id = id;
     this.name = name;
     this.divisions = divisions;

@@ -1,0 +1,10 @@
+export interface Employee {
+  id?: number;
+  name: string;
+  salary: number;
+  email: string;
+  country: string;      // ID of selected country
+  division: string;     // ID of selected division
+  district: string;     // ID of selected district
+  policeStation: string; // ID of selected police station
+}

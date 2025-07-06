@@ -22,6 +22,9 @@ import { Addpolicestation } from './police-station/addpolicestation/addpolicesta
 import { AddDistrict } from './district/add-district/add-district';
 import { ViewAllDistricts } from './district/view-all-districts/view-all-districts';
 import { AddDivisionComponent } from './division/add-division-component/add-division-component';
+import { AddCountry } from './country/add-country/add-country';
+import { AddEmployee } from './employee/add-employee/add-employee';
+import { ViewEmployees } from './employee/view-employees/view-employees';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { AddDivisionComponent } from './division/add-division-component/add-divi
     Addpolicestation,
      AddDistrict,
      ViewAllDistricts,
-     AddDivisionComponent, 
+     AddDivisionComponent,
+     AddCountry,
+     AddEmployee,
+     ViewEmployees, 
     
   ],
   imports: [
