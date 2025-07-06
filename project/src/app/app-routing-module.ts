@@ -12,6 +12,10 @@ import { Addlocation } from './location/addlocation/addlocation';
 import { AdminGuardGuard } from './guards/adminguard';
 import { UserGurd } from './guards/user-guard';
 import { AuthGuard } from './guards/authguard';
+import { Addpolicestation } from './police-station/addpolicestation/addpolicestation';
+import { AddDistrict } from './district/add-district/add-district';
+import { ViewAllDistricts } from './district/view-all-districts/view-all-districts';
+import { AddDivisionComponent } from './division/add-division-component/add-division-component';
 
 
 
@@ -26,6 +30,10 @@ const routes: Routes = [
   { path: 'allloc', component: Viewalllocation, canActivate: [AdminGuardGuard] },
   { path: 'addstu', component: Addstudent, canActivate: [AuthGuard] },
   { path: 'addloc', component: Addlocation, canActivate: [AdminGuardGuard] },
+  { path: 'police', component: Addpolicestation },
+  { path: 'adddis', component: AddDistrict },
+  { path: 'viewalldis', component: ViewAllDistricts },
+  { path: 'adddiv', component: AddDivisionComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

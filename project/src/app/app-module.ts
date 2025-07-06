@@ -17,11 +17,32 @@ import { Editstudent } from './student/editstudent/editstudent';
 import { Addlocation } from './location/addlocation/addlocation';
 import { Viewalllocation } from './location/viewalllocation/viewalllocation';
 import { Updatelocation } from './location/updatelocation/updatelocation';
+import { Addpolicestation } from './police-station/addpolicestation/addpolicestation';
+
+import { AddDistrict } from './district/add-district/add-district';
+import { ViewAllDistricts } from './district/view-all-districts/view-all-districts';
+import { AddDivisionComponent } from './division/add-division-component/add-division-component';
+
 
 @NgModule({
   declarations: [
     App,    
-    Registrationt, Login, Userprofile, Logout, Admin, Addstudent, Viewallstudent, Editstudent, Addlocation, Viewalllocation, Updatelocation
+    Registrationt, 
+    Login, 
+    Userprofile, 
+    Logout, 
+    Admin, 
+    Addstudent, 
+    Viewallstudent, 
+    Editstudent, 
+    Addlocation, 
+    Viewalllocation, 
+    Updatelocation, 
+    Addpolicestation,
+     AddDistrict,
+     ViewAllDistricts,
+     AddDivisionComponent, 
+    
   ],
   imports: [
     BrowserModule,

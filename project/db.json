@@ -49,7 +49,6 @@
       "role": "user"
     }
   ],
-  
   "countries": [
     {
       "id": 1,
@@ -62,17 +61,29 @@
             {
               "id": 1,
               "name": "Dhaka District",
-              "police_stations": [
-                { "id": 1, "name": "Gulshan Police Station" },
-                { "id": 2, "name": "Dhanmondi Police Station" }
+              "policeStations": [
+                {
+                  "id": 1,
+                  "name": "Gulshan Police Station"
+                },
+                {
+                  "id": 2,
+                  "name": "Dhanmondi Police Station"
+                }
               ]
             },
             {
               "id": 2,
               "name": "Gazipur District",
-              "police_stations": [
-                { "id": 3, "name": "Gazipur Sadar Police Station" },
-                { "id": 4, "name": "Tongi Police Station" }
+              "policeStations": [
+                {
+                  "id": 3,
+                  "name": "Gazipur Sadar Police Station"
+                },
+                {
+                  "id": 4,
+                  "name": "Tongi Police Station"
+                }
               ]
             }
           ]
@@ -84,9 +95,15 @@
             {
               "id": 3,
               "name": "Chattogram District",
-              "police_stations": [
-                { "id": 5, "name": "Kotwali Police Station" },
-                { "id": 6, "name": "Panchlaish Police Station" }
+              "policeStations": [
+                {
+                  "id": 5,
+                  "name": "Kotwali Police Station"
+                },
+                {
+                  "id": 6,
+                  "name": "Panchlaish Police Station"
+                }
               ]
             }
           ]
@@ -104,13 +121,89 @@
             {
               "id": 4,
               "name": "Kolkata",
-              "police_stations": [
-                { "id": 7, "name": "Lalbazar Police Station" },
-                { "id": 8, "name": "Behala Police Station" }
+              "policeStations": [
+                {
+                  "id": 7,
+                  "name": "Lalbazar Police Station"
+                },
+                {
+                  "id": 8,
+                  "name": "Behala Police Station"
+                }
               ]
             }
           ]
         }
+      ]
+    }
+  ],
+  "policeStations": [
+    {
+      "id": "1",
+      "name": "Khilgaon-1219"
+    },
+    {
+      "id": "6a5a",
+      "name": "Kotoali"
+    },
+    {
+      "id": "433d",
+      "name": "Shajahanpur-1209"
+    },
+    {
+      "id": "3",
+      "name": "Jatrabari-1210"
+    },
+    {
+      "id": "as",
+      "name": "Barishal Shadar"
+    },
+    {
+      "id": "asd",
+      "name": "Baker Gonj"
+    },
+    {
+      "id": "sd",
+      "name": "Moladi"
+    },
+    {
+      "id": "df",
+      "name": "Jeshor Shodor"
+    },
+    {
+      "id": "4664",
+      "name": "asdf"
+    }
+  ],
+  "districts": [
+    {
+      "id": "0b31",
+      "name": "Dhaka",
+      "policeStations": [
+        "1",
+        "6a5a",
+        "433d",
+        "3"
+      ]
+    },
+    {
+      "id": "9c34",
+      "name": "Barishal",
+      "policeStations": [
+        "as",
+        "asd",
+        "sd",
+        "4664"
+      ]
+    }
+  ],
+  "divisions": [
+    {
+      "id": "0614",
+      "name": "Dhaka",
+      "districts": [
+        "0b31",
+        "9c34"
       ]
     }
   ]
