@@ -9,6 +9,7 @@ import { Countryservice } from '../../service/countryservice';
 import { DivisionService } from '../../service/division-service';
 import { DistrictService } from '../../service/district-service';
 import { PoliceStationService } from '../../service/police-station.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-employees',
@@ -16,7 +17,9 @@ import { PoliceStationService } from '../../service/police-station.service';
   templateUrl: './view-employees.html',
   styleUrl: './view-employees.css'
 })
-export class ViewEmployees implements OnInit{
+export class ViewEmployees implements OnInit {
+
+  emp!: Employee;
 
   employees: Employee[] = [];
   countries: Country[] = [];
@@ -29,8 +32,9 @@ export class ViewEmployees implements OnInit{
     private countryService: Countryservice,
     private divisionService: DivisionService,
     private districtService: DistrictService,
-    private policeStationService: PoliceStationService
-  ) {}
+    private policeStationService: PoliceStationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.loadAllData();
@@ -58,6 +62,24 @@ export class ViewEmployees implements OnInit{
 
   getPoliceStationName(id: string): string {
     return this.policeStations.find(ps => ps.id == id)?.name || '';
+  }
+
+  getEmpByid(id: string) {
+    this.employeeService.getByEmpId(id).subscribe({
+      next: (data) => {
+        this.emp = data;
+        this.router.navigate(['/sinemp', id]);
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+
+
+
+    });
+
+
   }
 
 }

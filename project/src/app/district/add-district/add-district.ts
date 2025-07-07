@@ -12,6 +12,7 @@ import { PoliceStationService } from '../../service/police-station.service';
   styleUrl: './add-district.css'
 })
 export class AddDistrict {
+  
   districtForm: FormGroup;
   policeStations: PoliceStation[] = [];
 

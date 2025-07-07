@@ -19,6 +19,7 @@ import { AddDivisionComponent } from './division/add-division-component/add-divi
 import { AddCountry } from './country/add-country/add-country';
 import { AddEmployee } from './employee/add-employee/add-employee';
 import { ViewEmployees } from './employee/view-employees/view-employees';
+import { Viewemp } from './employee/viewemp/viewemp';
 
 
 
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'addcou', component: AddCountry },
   { path: 'addemp', component: AddEmployee },
   { path: 'allemp', component: ViewEmployees },
+  { path: 'sinemp/:id', component: Viewemp },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
