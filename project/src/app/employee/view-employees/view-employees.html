@@ -2,10 +2,7 @@
   <h2 class="mb-4">All Employees</h2>
 
   <div class="row">
-    <div
-      class="col-md-4 mb-4"
-      *ngFor="let emp of employees"
-    >
+    <div class="col-md-4 mb-4" *ngFor="let emp of employees">
       <div class="card shadow h-100">
         <div class="card-body">
           <h5 class="card-title">Name: {{ emp.name }}</h5>
@@ -28,11 +25,17 @@
           </p>
         </div>
         <div class="card-footer text-end">
-          <button class="btn btn-sm btn-warning me-2">Edit</button>
-          <button class="btn btn-sm btn-danger">Delete</button>
-          <button class="btn btn-sm btn-danger" (click)="getEmpByid(emp.id)">View</button>
+          <a [routerLink]="['/edit-employee', emp.id]" class="btn btn-sm btn-warning me-2">
+            Edit
+          </a>
+          <button class="btn btn-sm btn-danger me-2" (click)="deleteEmployee(emp.id)">
+            Delete
+          </button>
+          <button class="btn btn-sm btn-info" (click)="getEmpByid(emp.id)">
+            View
+          </button>
         </div>
+
       </div>
     </div>
   </div>
-</div>

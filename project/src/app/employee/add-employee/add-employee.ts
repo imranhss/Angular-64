@@ -9,6 +9,7 @@ import { Countryservice } from '../../service/countryservice';
 import { DivisionService } from '../../service/division-service';
 import { DistrictService } from '../../service/district-service';
 import { PoliceStationService } from '../../service/police-station.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
@@ -19,6 +20,8 @@ import { PoliceStationService } from '../../service/police-station.service';
 export class AddEmployee {
 
   employeeForm: FormGroup;
+  editing: boolean = false;
+  employeeId: string | null = null;
 
   countries: Country[] = [];
   allDivisions: Division[] = [];
@@ -35,12 +38,15 @@ export class AddEmployee {
     private countryService: Countryservice,
     private divisionService: DivisionService,
     private districtService: DistrictService,
-    private policeStationService: PoliceStationService
+    private policeStationService: PoliceStationService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.employeeForm = this.fb.group({
       name: ['', Validators.required],
       salary: [0, [Validators.required, Validators.min(0)]],
       email: ['', [Validators.required, Validators.email]],
+      gender: ['', Validators.required],
       country: ['', Validators.required],
       division: ['', Validators.required],
       district: ['', Validators.required],
@@ -53,6 +59,18 @@ export class AddEmployee {
     this.divisionService.getAll().subscribe(data => this.allDivisions = data);
     this.districtService.getAll().subscribe(data => this.allDistricts = data);
     this.policeStationService.getAll().subscribe(data => this.allPoliceStations = data);
+
+    // ✅ Check if editing
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+        this.editing = true;
+        this.employeeId = id;
+        this.loadEmployee(this.employeeId);
+      }
+    });
+
+
   }
 
   onCountryChange() {
@@ -88,14 +106,34 @@ export class AddEmployee {
   onSubmit() {
     if (this.employeeForm.invalid) return;
 
-    const employee = this.employeeForm.value;
+    const employee: any = { ...this.employeeForm.value };
 
-    this.employeeService.add(employee).subscribe(() => {
-      alert('Employee added successfully!');
-      this.employeeForm.reset();
-      this.filteredDivisions = [];
-      this.filteredDistricts = [];
-      this.filteredPoliceStations = [];
+    if (this.editing) {
+      employee.id = this.employeeId;
+      this.employeeService.update(employee).subscribe(() => {
+        alert('Employee updated successfully!');
+        this.router.navigate(['/view-employees']);
+      });
+    } else {
+      this.employeeService.add(employee).subscribe(() => {
+        alert('Employee added successfully!');
+        this.employeeForm.reset();
+        this.filteredDivisions = [];
+        this.filteredDistricts = [];
+        this.filteredPoliceStations = [];
+      });
+    }
+  }
+
+
+  loadEmployee(id: string) {
+    this.employeeService.getById(id).subscribe(emp => {
+      this.employeeForm.patchValue(emp);
+
+      // ✅ Pre-filter dependent dropdowns
+      this.onCountryChange();
+      this.onDivisionChange();
+      this.onDistrictChange();
     });
   }
 

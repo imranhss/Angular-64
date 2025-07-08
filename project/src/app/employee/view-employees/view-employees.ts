@@ -10,6 +10,7 @@ import { DivisionService } from '../../service/division-service';
 import { DistrictService } from '../../service/district-service';
 import { PoliceStationService } from '../../service/police-station.service';
 import { Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-view-employees',
@@ -41,12 +42,26 @@ export class ViewEmployees implements OnInit {
   }
 
   loadAllData() {
-    this.employeeService.getAll().subscribe(data => this.employees = data);
-    this.countryService.getAll().subscribe(data => this.countries = data);
-    this.divisionService.getAll().subscribe(data => this.divisions = data);
-    this.districtService.getAll().subscribe(data => this.districts = data);
-    this.policeStationService.getAll().subscribe(data => this.policeStations = data);
-  }
+  forkJoin({
+    employees: this.employeeService.getAll(),
+    countries: this.countryService.getAll(),
+    divisions: this.divisionService.getAll(),
+    districts: this.districtService.getAll(),
+    policeStations: this.policeStationService.getAll()
+  }).subscribe({
+    next: ({ employees, countries, divisions, districts, policeStations }) => {
+      this.employees = employees;
+      this.countries = countries;
+      this.divisions = divisions;
+      this.districts = districts;
+      this.policeStations = policeStations;
+    },
+    error: (err) => {
+      console.error('Error loading data:', err);
+      alert('Failed to load employees or lookup data.');
+    }
+  });
+}
 
   getCountryName(id: string): string {
     return this.countries.find(c => c.id == id)?.name || '';
@@ -65,7 +80,7 @@ export class ViewEmployees implements OnInit {
   }
 
   getEmpByid(id: string) {
-    this.employeeService.getByEmpId(id).subscribe({
+    this.employeeService.getById(id).subscribe({
       next: (data) => {
         this.emp = data;
         this.router.navigate(['/sinemp', id]);
@@ -74,12 +89,18 @@ export class ViewEmployees implements OnInit {
       error: (err) => {
         console.log(err);
       }
-
-
-
     });
 
-
   }
+
+
+  deleteEmployee(id: string) {
+  if (confirm('Are you sure you want to delete this employee?')) {
+    this.employeeService.delete(id).subscribe(() => {
+      alert('Deleted!');
+      this.loadAllData();
+    });
+  }
+}
 
 }

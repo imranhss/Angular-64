@@ -42,6 +42,7 @@ const routes: Routes = [
   { path: 'addemp', component: AddEmployee },
   { path: 'allemp', component: ViewEmployees },
   { path: 'sinemp/:id', component: Viewemp },
+  { path: 'edit-employee/:id', component: AddEmployee },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
