@@ -34,7 +34,7 @@ export class UserGurd implements CanActivate {
     if (this.authService.isAuthenticated() && this.authService.isUser()) {
       return true;
     }
-    return this.router.createUrlTree(['/login']);
+    return this.router.createUrlTree(['/logout']);
   }
 
   

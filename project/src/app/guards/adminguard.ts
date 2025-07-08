@@ -34,7 +34,7 @@ export class AdminGuardGuard implements CanActivate{
       return true;
     }
     // Redirect to login page or unauthorized page
-    return this.router.createUrlTree(['/login']);
+    return this.router.createUrlTree(['/logout']);
   }
 
 }
