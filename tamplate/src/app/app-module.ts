@@ -7,6 +7,9 @@ import { Sidebar } from './layout/sidebar/sidebar';
 import { Navbar } from './layout/navbar/navbar';
 import { Footer } from './layout/footer/footer';
 import { Dashboard } from './dashboard/dashboard/dashboard';
+import { Addstudent } from './student/addstudent/addstudent';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,16 +17,22 @@ import { Dashboard } from './dashboard/dashboard/dashboard';
     Sidebar,
     Navbar,
     Footer,
-    Dashboard
+    Dashboard,
+    Addstudent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(
+      withFetch()
+    ),
   ],
   bootstrap: [App]
 })
